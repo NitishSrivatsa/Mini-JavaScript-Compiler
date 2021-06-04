@@ -1,0 +1,42 @@
+start: seqOfStmts;
+
+seqOfStmts: statement seqOfStmts | statement | while;
+
+anyOperator: T_LCG | T_LOP | T_OP1 | T_OP2 | T_OP3;
+
+terminator: ';' | '\n' ;
+
+statement: declare terminator| expression terminator|  if | do | '{' seqOfStmts '}'  | T_CONSOLE '(' T_STR ')' | T_DOCUMENT '(' T_STR ')';
+
+id: T_ID ;
+
+idV: T_ID ;
+
+assign: '=' | T_SHA;
+
+expression: id assign expression  | value;
+
+value: unit anyOperator value | unit;
+
+unit: idV | T_OP4 idV | idV T_OP4 | T_STR | '(' list ')'| func | '[' list ']';
+
+func: idV '(' list ')'; 
+
+list: expression ',' list | expression;
+
+declare: T_VAR declaration | T_LET declaration;
+
+declaration: id |id ',' declaration|id '=' expression|id '=' expression ',' declaration;
+
+varOperator: T_VAR | T_LET | ;
+
+for: T_FOR '(' varOperator list ';' list ';' list ')' statement;
+
+if: T_IF '(' expression ')' statement | ifelse;  
+
+ifelse: T_ELSE statement;
+
+do: T_DO seqOfStmts;
+
+while: T_WHILE '(' expression ')' terminator;
+
