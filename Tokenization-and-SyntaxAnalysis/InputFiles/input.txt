@@ -1,0 +1,17 @@
+var text = "";
+var i = 0;
+//this line is a comment and will be ignored during tokenization
+if (hour < 18){              // 'hour' is not declared before use. Type of semantic error. Will be handled in the next phase
+	var j=0;                  // To show scope increment
+  	console.log("Good Morning");
+}
+do {
+  	text += "The number is " + i;
+  	i++;    
+}
+while (i < 5);               // do while loop parsed without errors and tokens should be generated
+var n=10                   // Semi colon missing, Error handling strategy applied
+a+1;                          // Syntax error will be shown
+
+
+

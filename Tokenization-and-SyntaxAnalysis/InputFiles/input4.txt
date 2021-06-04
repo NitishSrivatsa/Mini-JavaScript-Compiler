@@ -1,0 +1,5 @@
+var i = 0;
+var j=10
+console.log("Hello");
+console.log(hi);
+

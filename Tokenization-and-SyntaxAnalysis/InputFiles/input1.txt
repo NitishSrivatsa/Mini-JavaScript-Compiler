@@ -1,0 +1,10 @@
+var hour=20;
+
+if (hour < 18){ 
+	var i=0;
+  	console.log("Good Morning");
+}
+else {
+ 	console.log("Good Evening");
+}
+
