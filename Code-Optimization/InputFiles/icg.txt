@@ -1,0 +1,54 @@
+mov t0 10
+mov k t0
+mov t1 0
+mov e t1
+mov t2 0
+mov d t2
+mov t3 0
+mov m t3
+mov t4 80
+mov grade t4
+mov t5 80
+mov t6 10
+t7 = t5 + t6
+mov c t7
+mov t8 c
+mov t9 2
+t10 = t7 / t9
+mov e t10
+mov t11 0
+mov i t11
+label l0
+mov t12 i
+mov t13 k
+t14 = t12 < t13
+iffalse t14 goto l1
+mov t18 10
+mov n t18
+mov t19 grade
+mov t20 85
+t21 = t19 >= t20
+iftrue t21 goto l2
+goto l3
+label l2
+mov t22 n
+mov m t22
+mov t23 m
+mov t24 2
+t25 = t23 + t24
+mov grade t25
+goto l4
+label l3
+mov t26 n
+mov m t26
+mov t27 m
+mov t28 1
+t29 = t27 + t28
+mov grade t29
+label l4
+mov t15 i
+mov t16 1
+t17 = t15 + t16
+mov i t17
+goto l0
+label l1
