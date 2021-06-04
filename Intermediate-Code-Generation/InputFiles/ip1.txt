@@ -1,0 +1,17 @@
+length = 10;
+
+n = 5;
+i = 0;
+sum = 0; 
+
+if (length == 20){
+	m=12;
+	for (i=0;i<n;i=i+1){
+		sum=total+length;
+	}
+}
+else{
+	for (i=0;i<n;i=i+1){
+		sum=sum-length;
+	}
+}

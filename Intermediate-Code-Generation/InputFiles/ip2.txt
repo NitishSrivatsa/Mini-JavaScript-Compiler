@@ -1,0 +1,20 @@
+k=10;
+e=0;
+d=0;
+m=0;
+n=0;
+grade = 80;
+c=80+10;                        // To show Constant Folding
+e=c/2; 		                    //  To show Constant Propogation and Strength Reduction for Division operation
+
+for(i=0 ; i<k ; i=i+1){	
+	if(grade >= 85) {
+        	m=n;   			// To show COPY PROPOGATION
+		grade = n+2; 
+    }
+    else {
+	m=n;
+    	grade=n+1;
+    } 
+}
+
